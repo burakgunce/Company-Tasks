@@ -1,3 +1,8 @@
+using DataAccess.Context;
+using Entity.Entities;
+using Microsoft.EntityFrameworkCore;
+using Service;
+
 namespace ECommerceMVC
 {
     public class Program
@@ -6,7 +11,12 @@ namespace ECommerceMVC
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddServiceRegister();
+
             // Add services to the container.
+            builder.Services.AddDbContext<ECommerceDbContext>(b => b.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
+            builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<ECommerceDbContext>();
+
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();

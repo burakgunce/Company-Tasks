@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Context
 {
-    public class ECommerceDbContext : IdentityDbContext<AppUser>
+    public class ECommerceDbContext : IdentityDbContext<AppUser, AppRole, string>
     {
         public ECommerceDbContext(DbContextOptions options) : base(options)
         {
