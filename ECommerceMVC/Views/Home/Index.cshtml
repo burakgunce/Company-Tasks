@@ -1,8 +1,33 @@
-﻿@{
+﻿﻿
+@model List<Entity.Entities.Product>
+@{
     ViewData["Title"] = "Home Page";
+    var roles = TempData["roles"] as string[];   
+}
+
+@if (roles != null)
+{
+    foreach (var role in roles)
+    {
+        <h1 class="alert alert-success text-center">@role</h1>
+    }
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-4 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>                        
+                        <a href="#" class="btn btn-primary">Add Basket</a>
+                    </div>
+                </div>
+            </div>
+        }
+        
+    </div>
 </div>
