@@ -7,15 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsletterWebApi", "Newslet
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "E-Commerce-MVC", "E-Commerce-MVC", "{FD635D2C-7419-43D1-9FC2-AC6D29FE87D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceMVC", "ECommerceMVC\ECommerceMVC.csproj", "{89AC8B86-6194-472D-90B1-80BBD6EBED0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceMVC", "ECommerceMVC\ECommerceMVC.csproj", "{89AC8B86-6194-472D-90B1-80BBD6EBED0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{92694FF2-6BF1-439B-9850-730D349EF5D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{92694FF2-6BF1-439B-9850-730D349EF5D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{2073EE10-A4F7-480E-AB05-6A68B4EECCB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{2073EE10-A4F7-480E-AB05-6A68B4EECCB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{6B8AA511-E51D-4CB3-B4E6-36E4493071C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity", "Entity\Entity.csproj", "{6B8AA511-E51D-4CB3-B4E6-36E4493071C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{B6A90A0A-6CC5-482C-9949-A5C949790FA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{B6A90A0A-6CC5-482C-9949-A5C949790FA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateAQuiz-MVC", "CreateAQuiz-MVC\CreateAQuiz-MVC.csproj", "{3C349146-4B7E-4FDA-B7FB-08DE01D4BABA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{B6A90A0A-6CC5-482C-9949-A5C949790FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6A90A0A-6CC5-482C-9949-A5C949790FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6A90A0A-6CC5-482C-9949-A5C949790FA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C349146-4B7E-4FDA-B7FB-08DE01D4BABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C349146-4B7E-4FDA-B7FB-08DE01D4BABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C349146-4B7E-4FDA-B7FB-08DE01D4BABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C349146-4B7E-4FDA-B7FB-08DE01D4BABA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
