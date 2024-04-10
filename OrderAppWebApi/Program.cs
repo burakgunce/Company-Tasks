@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using OrderAppWebApi.BackgroundService;
 using OrderAppWebApi.Context;
 using Serilog;
 using Serilog.Core;
@@ -21,6 +22,8 @@ namespace OrderAppWebApi
 
             builder.Services.AddMemoryCache();
             builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
+
+            builder.Services.AddHostedService<SendMailService>();
 
             Logger log = new LoggerConfiguration()
             .WriteTo.File("logs/log.txt")

@@ -7,6 +7,7 @@ using OrderAppWebApi.Context;
 using OrderAppWebApi.Models.DTOs;
 using OrderAppWebApi.Models.Entities;
 using OrderAppWebApi.Models.Results;
+using OrderAppWebApi.RabbitMQ;
 using ServiceStack.Redis;
 using ServiceStack.Redis.Generic;
 using System.Text;
