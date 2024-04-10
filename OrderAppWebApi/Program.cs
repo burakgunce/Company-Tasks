@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using OrderAppWebApi.Context;
+using Serilog;
+using Serilog.Core;
 
 namespace OrderAppWebApi
 {
@@ -16,6 +18,17 @@ namespace OrderAppWebApi
             {
                 opt.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString), null);
             });
+
+            builder.Services.AddMemoryCache();
+            builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
+
+            Logger log = new LoggerConfiguration()
+            .WriteTo.File("logs/log.txt")
+            .WriteTo.MySQL(connectionString, "logs")
+            .MinimumLevel.Information()
+            .CreateLogger();
+
+            builder.Host.UseSerilog(log);
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
